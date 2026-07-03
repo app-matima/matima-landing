@@ -1,0 +1,34 @@
+# MATIMA LANDING — Règles Cursor
+
+## Contexte
+Landing page marketing pour Matima — SaaS pour MJPM (Mandataires Judiciaires à la Protection des Majeurs).
+Cible : professionnels juridiques français, 30-60 ans, cherchent à moderniser leur pratique.
+
+## Stack
+- Next.js 14 (App Router)
+- TypeScript strict
+- Tailwind CSS
+- Lucide React (icônes)
+- Vercel (déploiement)
+
+## Charte graphique
+- Accent : #00A394
+- Accent hover : #00C4B3
+- Texte fort : #0F1923
+- Texte doux : #6B7280
+- Fond blanc : #FFFFFF
+- Fond gris : #F4F5F7
+- Font : Inter (Google Fonts)
+
+## URLs externes
+- App : https://app.matima.net
+- Admin : https://admin.matima.net (pas encore déployé)
+- Contact : contact@matima.net
+
+## Règles
+- Page 100% responsive mobile first
+- Animations subtiles au scroll (Intersection Observer)
+- Jamais de librairies d'animation lourdes (pas de Framer Motion)
+- Tout le texte en français
+- Ton professionnel mais accessible
+- Pas de jargon juridique complexe
