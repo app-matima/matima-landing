@@ -31,7 +31,10 @@ export function Navbar() {
         "sticky top-0 z-40 px-4 md:px-10 flex items-center justify-between h-[60px]",
         showSolidBg
           ? "bg-white border-b border-border shadow-[0_1px_12px_rgba(15,25,35,0.06)]"
-          : "bg-transparent border-b border-transparent",
+          : clsx(
+              "bg-transparent border-b border-transparent",
+              isPrestations && "backdrop-blur-[10px]",
+            ),
       )}
     >
       <Link href="/" aria-label="Matima — Accueil" className="shrink-0">

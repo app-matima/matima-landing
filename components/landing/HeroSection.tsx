@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import clsx from "clsx";
-import { FolderOpen } from "lucide-react";
+import { ChevronDown, FolderOpen } from "lucide-react";
 import { MatimaLogo } from "@/components/brand/MatimaLogo";
 import { RadialGlow } from "./RadialGlow";
 import { IMAGES } from "@/lib/images";
@@ -121,6 +121,7 @@ export function HeroSection() {
   const overlayOpacity = progress * 0.7;
   const contentOpacity = progress;
   const contentTranslateY = (1 - progress) * 20;
+  const scrollHintOpacity = Math.max(0, 1 - progress * 4);
 
   return (
     <section
@@ -208,6 +209,24 @@ export function HeroSection() {
           </span>
         </p>
       </div>
+
+      {!isRevealed && scrollHintOpacity > 0 && (
+        <div
+          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 pointer-events-none transition-opacity duration-300"
+          style={{ opacity: scrollHintOpacity }}
+          aria-hidden
+        >
+          <span className="text-[15px] font-semibold text-[#0F1923] tracking-wide">
+            Faites défiler
+          </span>
+          <div className="scroll-hint-bounce">
+            <ChevronDown
+              className="w-7 h-7 text-[#0F1923]"
+              strokeWidth={2.25}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }

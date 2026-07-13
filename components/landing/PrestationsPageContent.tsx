@@ -54,7 +54,7 @@ const PROCESS_STEPS = [
     number: "03",
     title: "Attestation archivée dans la GED",
     description:
-      "Une attestation signée est générée automatiquement et rangée dans le dossier, prête pour vos obligations de suivi.",
+      "Une attestation signée est générée automatiquement et rangée dans le dossier du protégé, avec une preuve claire de l'intervention réalisée.",
   },
 ] as const;
 
@@ -146,10 +146,9 @@ export function PrestationsPageContent() {
               Un réseau de confiance pour toutes vos interventions terrain
             </h1>
             <p className="text-white text-base md:text-lg leading-relaxed">
-              Matima met à votre disposition une équipe et des partenaires de
-              confiance pour réaliser les interventions physiques dont vos
-              protégés ont besoin — commandées, suivies et attestées
-              directement depuis la plateforme.
+              Une équipe et des partenaires qualifiés pour chaque intervention
+              physique nécessaire à vos protégés — commandée et suivie
+              directement depuis Matima.
             </p>
           </ScrollReveal>
         </div>
@@ -168,7 +167,7 @@ export function PrestationsPageContent() {
               </h2>
               <p className="text-white text-base">
                 Les missions du quotidien, prises en charge rapidement par notre
-                réseau d&apos;intervenants de confiance.
+                équipe Matima.
               </p>
             </div>
           </ScrollReveal>

@@ -78,3 +78,23 @@ body {
   );
   background-size: 22px 22px;
 }
+
+@keyframes scroll-hint-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.scroll-hint-bounce {
+  animation: scroll-hint-bounce 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-hint-bounce {
+    animation: none;
+  }
+}
