@@ -12,14 +12,18 @@ const NAV_LINKS = [
   { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
 ] as const;
 
+const DARK_NAV_PAGES = ["/prestations", "/qui-sommes-nous"] as const;
+
 export function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const isPrestations = pathname === "/prestations";
+  const isDarkNavPage = DARK_NAV_PAGES.includes(
+    pathname as (typeof DARK_NAV_PAGES)[number],
+  );
   const { progress } = useHeroReveal();
 
   const navOpacity = isHome ? progress : 1;
-  const showSolidBg = isPrestations ? false : isHome ? progress >= 1 : true;
+  const showSolidBg = isDarkNavPage ? false : isHome ? progress >= 1 : true;
 
   return (
     <nav
@@ -33,13 +37,13 @@ export function Navbar() {
           ? "bg-white border-b border-border shadow-[0_1px_12px_rgba(15,25,35,0.06)]"
           : clsx(
               "bg-transparent border-b border-transparent",
-              isPrestations && "backdrop-blur-[10px]",
+              isDarkNavPage && "backdrop-blur-[10px]",
             ),
       )}
     >
       <Link href="/" aria-label="Matima — Accueil" className="shrink-0">
         <MatimaLogo
-          color={isPrestations ? "#FFFFFF" : "#0F1923"}
+          color={isDarkNavPage ? "#FFFFFF" : "#0F1923"}
           className="h-6 w-auto"
         />
       </Link>
@@ -50,7 +54,7 @@ export function Navbar() {
             href={link.href}
             className={clsx(
               "text-[13px] transition-colors no-underline",
-              isPrestations
+              isDarkNavPage
                 ? clsx(
                     "text-white/75 hover:text-accent",
                     pathname === link.href && "text-accent",

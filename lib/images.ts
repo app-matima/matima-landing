@@ -8,6 +8,8 @@ export const IMAGES = {
     "https://pthryicgtcbllvkbbylp.supabase.co/storage/v1/object/public/ressources-images/prestations.png",
   equipe:
     "https://pthryicgtcbllvkbbylp.supabase.co/storage/v1/object/public/ressources-images/equipe.png",
+  equipeMatima:
+    "https://pthryicgtcbllvkbbylp.supabase.co/storage/v1/object/public/ressources-images/equipe_matima.jpeg",
   dashboardProtege:
     "https://pthryicgtcbllvkbbylp.supabase.co/storage/v1/object/public/ressources-images/dashboard_protege.png",
   heroVideo:
