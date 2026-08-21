@@ -5,6 +5,12 @@ import { RadialGlow } from "./RadialGlow";
 const FOOTER_LINKS = [
   { href: "/prestations", label: "Prestations" },
   { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
+  { href: "/mentions-legales", label: "Mentions légales" },
+  {
+    href: "/politique-confidentialite",
+    label: "Politique de confidentialité",
+  },
+  { href: "/cgu-cgv", label: "CGU / CGV" },
 ] as const;
 
 export function Footer() {
