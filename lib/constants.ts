@@ -2,7 +2,7 @@ export const REGISTER_URL = "https://app.matima.net/auth/register";
 export const LOGIN_URL = "https://app.matima.net/auth/login";
 export const CONTACT_EMAIL = "contact@matima.net";
 
-export function planRegisterUrl(plan: "gestion" | "optimal" | "ultime") {
+export function planRegisterUrl(plan: "gestion" | "optimal" | "prestations") {
   return `${REGISTER_URL}?plan=${plan}`;
 }
 
@@ -80,13 +80,7 @@ export const PLAN_FEATURES = {
     "Génération DIPM automatique",
     "Compte de gestion PDF",
     "Paiement SEPA Bridge",
-  ],
-  ultime: [
-    "Tout le plan Optimal",
-    "Réception & ouverture courrier",
-    "Scan & numérisation",
-    "Classement auto dans la GED",
-    "Notification à chaque courrier",
+    "Assistants / multi-utilisateurs",
   ],
 } as const;
 
@@ -104,12 +98,5 @@ export const PLANS = [
     price: 4,
     features: PLAN_FEATURES.optimal,
     variant: "recommended" as const,
-  },
-  {
-    id: "ultime" as const,
-    name: "Ultime",
-    price: 8,
-    features: PLAN_FEATURES.ultime,
-    variant: "dark" as const,
   },
 ] as const;

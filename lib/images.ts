@@ -58,7 +58,7 @@ export const FEATURE_BLOCKS = [
     badgeClass: "bg-[#F3EEFF] text-[#6B4FBB]",
     title: "Travail en équipe",
     description:
-      "Invitez des assistants avec des permissions par module — GED, protégés, comptes ou courrier — pour déléguer en toute sécurité.",
+      "À partir du plan Optimal, invitez des assistants avec des permissions par module — GED, protégés, comptes ou courrier — pour déléguer en toute sécurité.",
     image: IMAGES.equipe,
     imageAlt: "Gestion d'équipe et permissions dans Matima",
   },

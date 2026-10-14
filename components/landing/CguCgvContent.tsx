@@ -109,14 +109,10 @@ export function CguCgvContent() {
                 <>
                   <strong className="text-text-strong font-semibold">
                     Gestion
-                  </strong>
-                  ,{" "}
-                  <strong className="text-text-strong font-semibold">
-                    Optimal
                   </strong>{" "}
                   et{" "}
                   <strong className="text-text-strong font-semibold">
-                    Ultime
+                    Optimal
                   </strong>{" "}
                   : formules payantes, facturées mensuellement en fonction du
                   nombre de dossiers de protection actifs gérés par le Client.

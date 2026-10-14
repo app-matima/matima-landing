@@ -2,7 +2,7 @@ export const FAQ_ITEMS = [
   {
     question: "Comment fonctionne la facturation par dossier ?",
     answer:
-      "La facturation est mensuelle et basée sur le nombre de dossiers actifs, selon le plan choisi : Gestion 2 €, Optimal 4 €, Ultime 8 € par dossier et par mois.",
+      "La facturation est mensuelle et basée sur le nombre de dossiers actifs : Gestion 2 € et Optimal 4 € par dossier et par mois. Le plan Prestations est gratuit (interventions facturées à l'usage). Le premier mois est offert sur tous les plans.",
   },
   {
     question: "Puis-je changer de plan à tout moment ?",
@@ -57,6 +57,6 @@ export const FAQ_ITEMS = [
   {
     question: "Puis-je inviter un assistant à travailler avec moi sur Matima ?",
     answer:
-      "Oui, vous pouvez inviter des assistants avec des permissions personnalisées par module — inclus dans tous les plans.",
+      "Oui, vous pouvez inviter des assistants avec des permissions personnalisées par module — disponibles à partir du plan Optimal.",
   },
 ] as const;

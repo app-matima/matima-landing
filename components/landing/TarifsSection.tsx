@@ -24,14 +24,7 @@ const OPTIMAL_FEATURES = [
   "Génération DIPM automatique",
   "Compte de gestion PDF",
   "Paiement SEPA Bridge",
-] as const;
-
-const ULTIME_FEATURES = [
-  "Tout le plan Optimal",
-  "Réception & ouverture courrier",
-  "Scan & numérisation",
-  "Classement auto dans la GED",
-  "Notification à chaque courrier",
+  "Assistants / multi-utilisateurs",
 ] as const;
 
 export function TarifsSection() {
@@ -40,7 +33,7 @@ export function TarifsSection() {
       id="tarifs"
       className="relative bg-bg-gray dot-pattern-light px-4 md:px-10 py-16 md:py-24 scroll-mt-[60px] overflow-hidden"
     >
-      <div className="max-w-[1160px] mx-auto relative z-10">
+      <div className="max-w-[1060px] mx-auto relative z-10">
         <ScrollReveal>
           <h2 className="text-[clamp(28px,4vw,38px)] font-black text-text-strong tracking-[-0.02em] mb-2 text-center">
             Des tarifs simples, par dossier
@@ -53,7 +46,7 @@ export function TarifsSection() {
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
           <ScrollReveal delay={80} className="h-full">
             <div className="flex flex-col h-full border border-border rounded-2xl p-7 bg-white shadow-sm">
               <div className="font-extrabold text-[17px] text-text-strong mb-1">
@@ -140,32 +133,6 @@ export function TarifsSection() {
                   className="block text-center py-3 bg-accent hover:bg-accent-hover rounded-[10px] font-semibold text-sm text-white no-underline transition-colors"
                 >
                   Choisir Optimal
-                </a>
-              </div>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal delay={170} className="h-full">
-            <div className="flex flex-col h-full bg-text-strong rounded-2xl p-7 shadow-md">
-              <div className="font-extrabold text-[17px] text-white mb-1">Ultime</div>
-              <div className="text-text-hint text-xs mb-5">
-                Optimal + gestion courrier
-              </div>
-              <div className="mb-6">
-                <span className="text-[44px] font-black text-white">8€</span>
-                <span className="text-text-hint text-[13px]"> /dossier/mois</span>
-              </div>
-              <div className="flex flex-1 flex-col gap-2.5 text-[13px] text-[#D1D5DB]">
-                {ULTIME_FEATURES.map((f) => (
-                  <div key={f}>✓ {f}</div>
-                ))}
-              </div>
-              <div className="mt-auto shrink-0 pt-7">
-                <a
-                  href="https://app.matima.net/auth/register?plan=ultime"
-                  className="block text-center py-3 border-[1.5px] border-[#374151] rounded-[10px] font-semibold text-sm text-white no-underline hover:bg-white/5 transition-colors"
-                >
-                  Choisir Ultime
                 </a>
               </div>
             </div>

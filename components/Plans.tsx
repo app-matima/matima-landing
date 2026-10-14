@@ -13,21 +13,18 @@ export function Plans() {
           </h2>
         </FadeIn>
 
-        <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 items-stretch">
+        <div className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 items-stretch max-w-3xl mx-auto">
           {PLANS.map((plan, i) => {
             const isRecommended = plan.variant === "recommended";
-            const isDark = plan.variant === "dark";
 
             return (
               <FadeIn key={plan.id} delay={i * 80}>
                 <div
                   className={clsx(
-                    "relative rounded-[14px] p-6 flex flex-col h-full",
-                    isRecommended && "border-2 border-accent bg-white",
-                    !isRecommended &&
-                      !isDark &&
-                      "border border-border bg-white",
-                    isDark && "bg-text-strong text-white",
+                    "relative rounded-[14px] p-6 flex flex-col h-full bg-white",
+                    isRecommended
+                      ? "border-2 border-accent"
+                      : "border border-border",
                   )}
                 >
                   {isRecommended && (
@@ -36,48 +33,25 @@ export function Plans() {
                     </span>
                   )}
 
-                  <h3
-                    className={clsx(
-                      "text-lg font-bold",
-                      isDark ? "text-white" : "text-text-strong",
-                    )}
-                  >
+                  <h3 className="text-lg font-bold text-text-strong">
                     {plan.name}
                   </h3>
 
                   <div className="mt-4 flex items-baseline gap-1">
-                    <span
-                      className={clsx(
-                        "text-[40px] font-black leading-none tracking-[-0.03em]",
-                        isDark ? "text-white" : "text-text-strong",
-                      )}
-                    >
+                    <span className="text-[40px] font-black leading-none tracking-[-0.03em] text-text-strong">
                       {plan.price}€
                     </span>
-                    <span
-                      className={clsx(
-                        "text-sm",
-                        isDark ? "text-text-hint" : "text-text-soft",
-                      )}
-                    >
-                      /dossier/mois
-                    </span>
+                    <span className="text-sm text-text-soft">/dossier/mois</span>
                   </div>
 
                   <ul className="mt-6 space-y-3 flex-1">
                     {plan.features.map((feature) => (
                       <li
                         key={feature}
-                        className={clsx(
-                          "flex items-start gap-2 text-sm leading-snug",
-                          isDark ? "text-white/70" : "text-text-soft",
-                        )}
+                        className="flex items-start gap-2 text-sm leading-snug text-text-soft"
                       >
                         <Check
-                          className={clsx(
-                            "w-4 h-4 shrink-0 mt-0.5",
-                            isDark ? "text-accent" : "text-accent",
-                          )}
+                          className="w-4 h-4 shrink-0 mt-0.5 text-accent"
                           strokeWidth={2.5}
                         />
                         {feature}
@@ -89,13 +63,9 @@ export function Plans() {
                     href={planRegisterUrl(plan.id)}
                     className={clsx(
                       "mt-8 block text-center px-5 py-3 rounded-xl font-semibold text-sm transition-colors",
-                      isRecommended &&
-                        "bg-accent hover:bg-accent-hover text-white",
-                      !isRecommended &&
-                        !isDark &&
-                        "border border-border hover:bg-bg-gray text-text-strong",
-                      isDark &&
-                        "border border-[#374151] hover:bg-white/5 text-white",
+                      isRecommended
+                        ? "bg-accent hover:bg-accent-hover text-white"
+                        : "border border-border hover:bg-bg-gray text-text-strong",
                     )}
                   >
                     Choisir {plan.name}
